@@ -3,7 +3,7 @@
 EAPI="5"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="25"
+K_GENPATCHES_VER="28"
 K_DEBLOB_AVAILABLE="1"
 inherit kernel-2
 detect_version
@@ -14,7 +14,7 @@ DESCRIPTION="TuxOnIce + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/ http://www.tuxonice.net"
 IUSE="deblob experimental"
 
-TUXONICE_SNAPSHOT="2013-11-07"
+TUXONICE_SNAPSHOT="2013-11-22"
 TUXONICE_PV="$(replace_version_separator 2 '.')"
 
 TUXONICE_PATCH="tuxonice-for-linux-${TUXONICE_PV}-${TUXONICE_SNAPSHOT}.patch.bz2"

@@ -2,19 +2,18 @@
 
 EAPI="5"
 ETYPE="sources"
-K_WANT_GENPATCHES="base extras"
-K_GENPATCHES_VER="19"
-K_DEBLOB_AVAILABLE="1"
-inherit kernel-2
+K_WANT_GENPATCHES="base extras experimental"
+K_GENPATCHES_VER="2"
+
+inherit kernel-2 versionator
 detect_version
 detect_arch
-
 
 DESCRIPTION="TuxOnIce + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/ http://www.tuxonice.net"
 
-TUXONICE_SNAPSHOT="2013-09-22"
-TUXONICE_PV="$(replace_version_separator 2 '.')"
+TUXONICE_SNAPSHOT="2013-11-22"
+TUXONICE_PV="${PV}"
 
 TUXONICE_PATCH="tuxonice-for-linux-${TUXONICE_PV}-${TUXONICE_SNAPSHOT}.patch.bz2"
 TUXONICE_URI="http://tuxonice.net/downloads/all/${TUXONICE_PATCH}"
@@ -22,7 +21,8 @@ UNIPATCH_LIST="${DISTDIR}/${TUXONICE_PATCH}"
 UNIPATCH_STRICTORDER="yes"
 SRC_URI="${KERNEL_URI} ${GENPATCHES_URI} ${ARCH_URI} ${TUXONICE_URI}"
 
-KEYWORDS="amd64 x86"
+KEYWORDS="~amd64 ~x86"
+IUSE="experimental"
 
 RDEPEND="${RDEPEND}
 	>=sys-apps/tuxonice-userui-1.0
