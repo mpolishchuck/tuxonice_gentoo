@@ -3,8 +3,8 @@
 EAPI="5"
 ETYPE="sources"
 K_WANT_GENPATCHES="base extras experimental"
-K_GENPATCHES_VER="3"
-K_DEBLOB_AVAILABLE="1"
+K_GENPATCHES_VER="5"
+
 inherit kernel-2
 detect_version
 detect_arch
@@ -12,10 +12,9 @@ detect_arch
 DESCRIPTION="TuxOnIce + Gentoo patchset sources"
 HOMEPAGE="http://dev.gentoo.org/~mpagano/genpatches/ http://www.tuxonice.net"
 
-TUXONICE_SNAPSHOT="2013-11-30"
-TUXONICE_PV="${PV}"
+TUXONICE_SNAPSHOT="2013-12-09"
 
-TUXONICE_PATCH="tuxonice-for-linux-${TUXONICE_PV}-${TUXONICE_SNAPSHOT}.patch.bz2"
+TUXONICE_PATCH="tuxonice-for-linux-${PV}-${TUXONICE_SNAPSHOT}.patch.bz2"
 TUXONICE_URI="http://tuxonice.net/downloads/all/${TUXONICE_PATCH}"
 UNIPATCH_LIST="${DISTDIR}/${TUXONICE_PATCH}"
 UNIPATCH_STRICTORDER="yes"
